@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #a03535, #333392);
+            background: linear-gradient(135deg, #6a0dad, #1e90ff); /* Updated colors */
             color: #fff;
             line-height: 1.6;
         }
@@ -28,6 +28,12 @@
         header {
             padding: 40px 0;
             text-align: center;
+            animation: fadeIn 1s; /* Animation added */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         nav ul {
@@ -43,25 +49,32 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
             font-size: 20px;
         }
 
         nav ul li a:hover {
             color: #ffd700; /* Gold color on hover */
+            transform: scale(1.1); /* Slight scale effect */
         }
 
         .section {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15); /* Slightly darker */
             margin: 40px 0;
             padding: 40px;
             border-radius: 10px;
             transition: transform 0.3s, background 0.3s;
+            animation: slideIn 0.5s; /* Animation added */
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         .section:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.25);
         }
 
         .project {
@@ -69,11 +82,12 @@
             margin: 20px 0;
             padding: 25px;
             border-radius: 5px;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s; /* Added box shadow */
         }
 
         .project:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Shadow on hover */
         }
 
         footer {
@@ -93,41 +107,12 @@
             text-decoration: none;
             color: #fff;
             font-size: 30px; /* Increased size for social links */
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s; /* Added transform */
         }
 
         .social-links a:hover {
             color: #ffd700;
-        }
-
-        .code-editor {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-
-        .code-editor textarea {
-            width: 100%;
-            height: 200px;
-            background: #222;
-            color: #fff;
-            border: 1px solid #fff;
-            border-radius: 5px;
-            padding: 10px;
-            font-family: 'Courier New', Courier, monospace;
-            resize: none;
-        }
-
-        .output {
-            background: #fff;
-            color: #000;
-            padding: 10px;
-            border-radius: 5px;
-            height: 200px;
-            overflow-y: auto;
-            border: 1px solid #fff;
-            margin-top: 20px;
+            transform: scale(1.1); /* Scale on hover */
         }
 
         @media (max-width: 600px) {
@@ -150,7 +135,6 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#editor">Code Editor</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -164,56 +148,79 @@
     <main class="container">
         <section id="about" class="section">
             <h2 style="font-size: 28px;">About Me</h2>
-            <p style="font-size: 18px;">just your average 14 year old software developer. Skills:- im a game developer in unity, godot and roblox studio. languages i know are: GD script, Lua(U), C++, C#, PHP, HTML, CSS, JS, Python and kotlin i also know most of adobe and auodesk softwares.</p>
+            <p style="font-size: 18px;">
+                Just your average 14-year-old software developer. I’m a game developer proficient in **Unity**, 
+                **Godot**, and **Roblox Studio**. I know the following languages:
+                <ul>
+                    <li>GD Script</li>
+                    <li>Lua (U)</li>
+                    <li>C++, C#</li>
+                    <li>PHP, HTML, CSS</li>
+                    <li>JavaScript, Python, and Kotlin</li>
+                </ul>
+                I also have experience with Adobe and Autodesk software.
+            </p>
         </section>
 
         <section id="projects" class="section">
             <h2 style="font-size: 28px;">My Projects</h2>
+
             <div class="project">
                 <h3 style="font-size: 24px;">Python Projects</h3>
-                <p style="font-size: 16px;">This includes age calculators, complex calculators, password managers made using Tkinter, and some other projects.</p>
+                <p style="font-size: 16px;">
+                    This includes:
+                    <ul>
+                        <li>Age calculators</li>
+                        <li>Complex calculators</li>
+                        <li>Password managers made using Tkinter</li>
+                    </ul>
+                </p>
             </div>
+
             <div class="project">
-                <h3 style="font-size: 24px;">C++ projects</h3>
-                <p style="font-size: 16px;">C++ projects.</p>
+                <h3 style="font-size: 24px;">C++ Projects</h3>
+                <p style="font-size: 16px;">Worked on several C++ projects involving data structures and algorithms.</p>
             </div>
+
             <div class="project">
                 <h3 style="font-size: 24px;">Web Development Projects</h3>
-                <p style="font-size: 16px;">Created several websites using HTML, CSS, and JavaScript, including a personal blog and a portfolio site.</p>
+                <p style="font-size: 16px;">
+                    Developed multiple websites using **HTML**, **CSS**, and **JavaScript**. 
+                    Some of these include a personal blog and a portfolio website.
+                </p>
             </div>
+
             <div class="project">
                 <h3 style="font-size: 24px;">Mobile Apps</h3>
-                <p style="font-size: 16px;">Developed a simple weather app and a to-do list app using Kotlin for Android.</p>
+                <p style="font-size: 16px;">
+                    Created simple mobile apps, such as a weather app and a to-do list app, using **Kotlin** for Android.
+                </p>
             </div>
+
             <div class="project">
                 <h3 style="font-size: 24px;">Game Development Projects</h3>
-                <p style="font-size: 16px;">Worked on a multiplayer game in Roblox, and a 2D platformer in Unity that features custom physics and animations.</p>
+                <p style="font-size: 16px;">
+                    Worked on various games, including:
+                    <ul>
+                        <li>A multiplayer game in Roblox</li>
+                        <li>A 2D platformer in Unity with custom physics and animations</li>
+                    </ul>
+                </p>
             </div>
-        </section>
-
-        <section id="editor" class="section code-editor">
-            <h2 style="font-size: 28px;">Code Editor</h2>
-            <textarea id="code" placeholder="Write your HTML here..."></textarea>
-            <button onclick="runCode()" style="margin-top: 10px;">Run Code</button>
-            <div class="output" id="output"></div>
         </section>
 
         <section id="contact" class="section">
             <h2 style="font-size: 28px;">Contact Me</h2>
-            <p style="font-size: 18px;">Email: <a href="mailto:mustafaishere35@gmail.com" style="color: #ffd700;">mustafaishere35@gmail.com</a></p>
+            <p style="font-size: 18px;">
+                Email: <a href="mailto:mustafaishere35@gmail.com" style="color: #ffd700;">
+                    mustafaishere35@gmail.com
+                </a>
+            </p>
         </section>
     </main>
 
     <footer>
         <p style="font-size: 16px;">© 2024 My Portfolio</p>
     </footer>
-
-    <script>
-        function runCode() {
-            const code = document.getElementById('code').value;
-            const output = document.getElementById('output');
-            output.innerHTML = code;  // Render the code as HTML
-        }
-    </script>
 </body>
 </html>
