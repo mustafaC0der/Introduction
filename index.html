@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Mustafa Shakeel</title>
     <style>
+        /* Global Reset */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -14,220 +15,270 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #6a0dad, #1e90ff);
-            color: #fff;
+            background-color: #111;
+            color: #e0e0e0;
             line-height: 1.6;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
+        /* Full-Screen Header */
         header {
-            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #707070, #ffd700);
             text-align: center;
-            animation: fadeIn 1s;
+            color: #fff;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        header h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
         }
 
         nav ul {
             list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 25px;
+            display: flex;
+            gap: 30px;
         }
 
         nav ul li a {
-            color: #fff;
+            color: #e0e0e0;
+            font-size: 1.1rem;
             text-decoration: none;
-            transition: color 0.3s, transform 0.3s;
-            font-size: 20px;
+            padding: 5px 15px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #ffd700;
-            transform: scale(1.1);
+            border-bottom: 2px solid #ffd700;
         }
 
+        /* Section Styling */
         .section {
-            background: rgba(255, 255, 255, 0.15);
-            margin: 40px 0;
-            padding: 40px;
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #222;
+            margin: 40px auto;
             border-radius: 10px;
-            transition: transform 0.3s, background 0.3s;
-            animation: slideIn 0.5s;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            max-width: 900px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            transition: transform 0.3s;
         }
 
         .section:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.02);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        /* Project Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .project {
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            margin: 20px 0;
-            padding: 25px;
-            border-radius: 5px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
         }
 
         .project:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            border: 1px solid #ffd700;
         }
 
+        .project h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        /* Skills Progress Bar */
+        .skills {
+            margin: 20px 0;
+            text-align: left;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .skill {
+            margin: 10px 0;
+        }
+
+        .progress {
+            background-color: #444;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: #ffd700;
+            width: 0; /* This will be set with JavaScript */
+            transition: width 0.5s ease;
+        }
+
+        /* Footer */
         footer {
+            padding: 20px;
             text-align: center;
-            padding: 20px 0;
-            background: rgba(255, 255, 255, 0.1);
+            background-color: #1e1e1e;
+            color: #e0e0e0;
             margin-top: 40px;
         }
 
-        .social-links {
-            margin: 20px 0;
-            text-align: center;
-        }
-
         .social-links a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #fff;
-            font-size: 30px;
-            transition: color 0.3s, transform 0.3s;
+            color: #e0e0e0;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
         }
 
         .social-links a:hover {
             color: #ffd700;
-            transform: scale(1.1);
-        }
-
-        @media (max-width: 600px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-
-            .social-links a {
-                font-size: 24px;
-            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1 style="font-size: 36px;">mustafaC0der</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#goals">Goals</a></li>
-                </ul>
-            </nav>
-            <div class="social-links">
-                <a href="https://github.com/mustafaC0der" target="_blank">GitHub</a>
-                <a href="https://www.instagram.com/_mustafa_lol_?igsh=MWNhMzQzanN4bXAyMA==" target="_blank">Instagram</a>
-                <a href="https://www.tiktok.com/@mustafa_ishere?_t=8qUBqimKasE&_r=1" target="_blank">TikTok</a>
-            </div>
+        <h1>Mustafa Shakeel</h1>
+        <div class="social-links">
+            <a href="https://github.com/mustafaC0der" target="_blank">GitHub</a>
+            <a href="https://www.instagram.com/_mustafa_lol_" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@mustafa_ishere" target="_blank">TikTok</a>
         </div>
+        <br>
+        <p>14-year-old developer skilled in game dev and web design</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#interests">Interests</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
+    <main>
         <section id="about" class="section">
-            <h2 style="font-size: 28px;">About Me</h2>
-            <p style="font-size: 18px;">
-                Just your average 14-year-old software developer. I’m a game developer proficient in **Unity**, 
-                **Godot**, and **Roblox Studio**. I know the following languages:
+            <h2>About Me</h2>
+            <p>
+                I’m a young developer with expertise in Unity, Godot, and Roblox Studio. I’m proficient in:
                 <ul>
-                    <li>GD Script</li>
-                    <li>Lua (U)</li>
-                    <li>C++, C#</li>
-                    <li>PHP, HTML, CSS</li>
-                    <li>JavaScript, Python, and Kotlin</li>
+                    <li>GD Script, Lua, C++, C#, PHP</li>
+                    <li>HTML, CSS, JavaScript, Python, Kotlin</li>
                 </ul>
-                I also have experience with Adobe and Autodesk software.
+                Also experienced in Adobe and Autodesk software.
             </p>
         </section>
 
         <section id="projects" class="section">
-            <h2 style="font-size: 28px;">My Projects</h2>
-
-            <div class="project">
-                <h3 style="font-size: 24px;">Python Projects</h3>
-                <p style="font-size: 16px;">
-                    This includes:
-                    <ul>
-                        <li>Age calculators</li>
-                        <li>Complex calculators</li>
-                        <li>Password managers made using Tkinter</li>
-                    </ul>
-                </p>
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Python Projects</h3>
+                    <p>Includes age calculators, complex calculators, and password managers.</p>
+                </div>
+                <div class="project">
+                    <h3>C++ Projects</h3>
+                    <p>Projects involving data structures and algorithms.</p>
+                </div>
+                <div class="project">
+                    <h3>Web Development Projects</h3>
+                    <p>Created websites with HTML, CSS, and JavaScript, including a blog and portfolio.</p>
+                </div>
+                <div class="project">
+                    <h3>Mobile Apps</h3>
+                    <p>Developed a weather app and to-do list app using Kotlin for Android.</p>
+                </div>
+                <div class="project">
+                    <h3>Game Development Projects</h3>
+                    <p>Built a multiplayer game in Roblox and a 2D platformer in Unity.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="project">
-                <h3 style="font-size: 24px;">C++ Projects</h3>
-                <p style="font-size: 16px;">Worked on several C++ projects involving data structures and algorithms.</p>
-            </div>
-
-            <div class="project">
-                <h3 style="font-size: 24px;">Web Development Projects</h3>
-                <p style="font-size: 16px;">
-                    Developed multiple websites using **HTML**, **CSS**, and **JavaScript**. 
-                    Some of these include a personal blog and a portfolio website.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3 style="font-size: 24px;">Mobile Apps</h3>
-                <p style="font-size: 16px;">
-                    Created simple mobile apps, such as a weather app and a to-do list app, using **Kotlin** for Android.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3 style="font-size: 24px;">Game Development Projects</h3>
-                <p style="font-size: 16px;">
-                    Worked on various games, including:
-                    <ul>
-                        <li>A multiplayer game in Roblox</li>
-                        <li>A 2D platformer in Unity with custom physics and animations</li>
-                    </ul>
-                </p>
+        <section id="skills" class="section">
+            <h2>My Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>C++</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Kotlin</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>HTML/CSS</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="goals" class="section">
-            <h2 style="font-size: 28px;">My Goals as a Software Engineer</h2>
-            <p style="font-size: 18px;">
-                As a software engineer, I strive to make a meaningful impact through my work. Here are some of my goals:
-            </p>
-            <ul style="font-size: 16px;">
-                <li>To continually improve my coding skills in languages such as C++, Python, and Kotlin.</li>
-                <li>To work on innovative projects that challenge my problem-solving abilities.</li>
-                <li>To contribute to open-source projects and collaborate with other developers.</li>
-                <li>To stay updated with the latest technologies and trends in software development.</li>
-                <li>To create software solutions that enhance user experience and accessibility.</li>
-                <li>To mentor and support other aspiring software engineers in their learning journey.</li>
+            <h2>My Goals as a Software Engineer</h2>
+            <ul>
+                <li>Improve coding skills in C++, Python, and Kotlin</li>
+                <li>Work on innovative projects that challenge me</li>
+                <li>Contribute to open-source and collaborate with developers</li>
+                <li>Stay updated with the latest software tech</li>
+                <li>Create accessible software solutions</li>
+            </ul>
+        </section>
+
+        <section id="interests" class="section">
+            <h2>My Interests</h2>
+            <ul>
+                <li>Computer Science: Exploring algorithms, data structures, and software principles.</li>
+                <li>Software Engineering: Building efficient and reliable software systems.</li>
+                <li>Mathematics: Studying calculus, statistics, and geometry.</li>
+                <li>Game Development: Creating immersive games with a focus on game mechanics.</li>
+                <li>Physics related topics such as string theory and thermodynamics.</li>
+                <li>Chemistry has always been a strong point of mine and i love it.</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p style="font-size: 16px;">© 2024 My Portfolio</p>
+        <p>BYEE.</p>
     </footer>
 </body>
 </html>
