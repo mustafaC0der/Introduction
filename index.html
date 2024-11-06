@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Mustafa Shakeel | Developer</title>
+    <title>Mustafa Shakeel</title>
     <style>
         /* Global Reset */
         * {
@@ -155,13 +155,6 @@
         .social-links a:hover {
             color: #ffd700;
         }
-
-        /* Gallery */
-        .projects-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
     </style>
 </head>
 <body>
@@ -178,7 +171,6 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#featured-projects">Featured Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#goals">Goals</a></li>
@@ -188,7 +180,6 @@
     </header>
 
     <main>
-        <!-- About Section -->
         <section id="about" class="section">
             <h2>About Me</h2>
             <p>
@@ -201,7 +192,32 @@
             </p>
         </section>
 
-        <!-- Featured Projects Section -->
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Python Projects</h3>
+                    <p>Includes age calculators, complex calculators, and password managers.</p>
+                </div>
+                <div class="project">
+                    <h3>C++ Projects</h3>
+                    <p>Projects involving data structures and algorithms.</p>
+                </div>
+                <div class="project">
+                    <h3>Web Development Projects</h3>
+                    <p>Created websites with HTML, CSS, and JavaScript, including a blog and portfolio.</p>
+                </div>
+                <div class="project">
+                    <h3>Mobile Apps</h3>
+                    <p>Developed a weather app and to-do list app using Kotlin for Android.</p>
+                </div>
+                <div class="project">
+                    <h3>Game Development Projects</h3>
+                    <p>Built a multiplayer game in Roblox and a 2D platformer in Unity.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="featured-projects" class="section">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
@@ -223,66 +239,71 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="section">
-            <h2>Skills</h2>
+            <h2>My Skills</h2>
             <div class="skills">
                 <div class="skill">
-                    <p>HTML/CSS</p>
+                    <span>Python</span>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 90%"></div>
+                        <div class="progress-bar" style="width: 75%;"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <p>JavaScript</p>
+                    <span>C++</span>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 80%"></div>
+                        <div class="progress-bar" style="width: 70%;"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <p>C#</p>
+                    <span>Kotlin</span>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 85%"></div>
+                        <div class="progress-bar" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Unity</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Godot</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Goals Section -->
-       <section id="goals" class="section">
-    <h2>My Goals</h2>
-    <p>As I continue to grow in my development journey, here are some of the key goals I aim to achieve:</p>
-    <ul>
-        <li><strong>Become a CFD Engineer:</strong> My ultimate career goal is to work as a Computational Fluid Dynamics (CFD) engineer, focusing on simulating complex fluid flows to aid in product design and aerodynamics.</li>
-        <li><strong>Master Game Development Tools:</strong> I aim to master multiple game engines like Unity, Godot, and Roblox Studio, to create immersive and innovative games while improving my scripting skills in C#, Lua, and GDScript.</li>
-        <li><strong>Improve Web Development Skills:</strong> I plan to enhance my web development abilities, particularly in advanced JavaScript, React, and backend technologies, to build dynamic, responsive websites and applications.</li>
-        <li><strong>Develop and Release My Own Game:</strong> My goal is to develop and release my own game, combining storytelling, physics, and interactive gameplay to create a unique experience for players.</li>
-        <li><strong>Contribute to Open Source Projects:</strong> I am committed to contributing to open-source projects, learning from other developers, and improving my coding skills through collaboration.</li>
-        <li><strong>Refine Python Programming Skills:</strong> I want to further refine my Python skills by building automation tools, AI models, and solving real-world problems to stay at the forefront of technology.</li>
-        <li><strong>Create a Successful Portfolio:</strong> My goal is to build a portfolio that highlights my skills and showcases my best work, making it easy for potential collaborators or employers to see what I can do.</li>
-        <li><strong>Expand Knowledge of Scientific Simulation:</strong> I aim to expand my understanding of scientific simulations, particularly in fluid dynamics and thermodynamics, to apply my skills in real-world engineering challenges.</li>
-    </ul>
-</section>
+        <section id="goals" class="section">
+            <h2>My Goals</h2>
+            <p>
+                As I continue to learn and grow in my programming skills, my primary goals include:
+                <ul>
+                    <li>Becoming a CFD Engineer.</li>
+                    <li>Building a successful career in game development.</li>
+                    <li>Contributing to open-source projects.</li>
+                    <li>Creating innovative software solutions.</li>
+                </ul>
+            </p>
+        </section>
 
-
-        <!-- Interests Section -->
-       <section id="interests" class="section">
-    <h2>My Interests</h2>
-    <p>Beyond programming and development, I have a deep passion for a variety of subjects that inspire my work and personal growth:</p>
-    <ul>
-        <li><strong>Physics:</strong> I have a strong interest in physics, particularly in the areas of fluid dynamics, thermodynamics, and the study of forces and motion. This interest is what motivates me to pursue a career in CFD engineering.</li>
-        <li><strong>Chemistry:</strong> My curiosity about the chemical processes and reactions that occur in nature drives my interest in scientific simulations and their applications in real-world scenarios, especially in engineering and material science.</li>
-        <li><strong>Automation Projects:</strong> I am fascinated by automation and enjoy creating projects that make tasks easier and more efficient. I am always looking for new ways to automate repetitive processes through coding.</li>
-        <li><strong>Learning New Programming Languages:</strong> I love exploring new programming languages and technologies. Learning different languages not only broadens my knowledge but also allows me to approach problems from multiple perspectives.</li>
-        <li><strong>Technological Advancements:</strong> I am excited about emerging technologies and trends such as AI, machine learning, and quantum computing. Staying up to date with these developments helps me understand how they can impact my projects and the world around us.</li>
-    </ul>
-</section>
-
+        <section id="interests" class="section">
+            <h2>My Interests</h2>
+            <p>
+                I have a keen interest in physics and chemistry, as well as automation projects in coding. I enjoy learning new programming languages and exploring the latest technologies.
+            </p>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Mustafa Shakeel. All rights reserved.</p>
+        <p>&copy; 2024 Mustafa Shakeel</p>
     </footer>
 </body>
 </html>
