@@ -110,6 +110,30 @@
             margin-bottom: 10px;
         }
 
+        /* Gallery Section */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
         /* Skills Progress Bar */
         .skills {
             margin: 20px 0;
@@ -175,6 +199,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#goals">Goals</a></li>
                 <li><a href="#interests">Interests</a></li>
+                <li><a href="#gallery">Gallery</a></li> <!-- Added gallery link -->
             </ul>
         </nav>
     </header>
@@ -218,6 +243,22 @@
             </div>
         </section>
 
+        <!-- New Gallery Section -->
+        <section id="gallery" class="section">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="images/image1.jpeg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image2.jpeg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image3.jpeg" alt="Image 3">
+                </div>
+            </div>
+        </section>
+
         <section id="featured-projects" class="section">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
@@ -227,55 +268,32 @@
                     <a href="https://github.com/mustafaC0der/to-do-list-app" target="_blank" style="color: #ffd700;">View on GitHub</a>
                 </div>
                 <div class="project">
-                    <h3>The Math Teacher Bot</h3>
-                    <p>A Discord bot that helps with math-related questions.</p>
-                    <a href="https://github.com/mustafaC0der/The-maths-teacher" target="_blank" style="color: #ffd700;">View on GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>Python Tools</h3>
-                    <p>Various Python scripts and tools for different tasks.</p>
-                    <a href="https://github.com/mustafaC0der/python-tools" target="_blank" style="color: #ffd700;">View on GitHub</a>
+                    <h3>Weather App</h3>
+                    <p>A simple weather app using Kotlin.</p>
+                    <a href="https://github.com/mustafaC0der/weather-app" target="_blank" style="color: #ffd700;">View on GitHub</a>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="section">
-            <h2>My Skills</h2>
+            <h2>Skills</h2>
             <div class="skills">
                 <div class="skill">
-                    <span>Python</span>
+                    <p>HTML/CSS</p>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 75%;"></div>
+                        <div class="progress-bar" style="width: 90%"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span>C++</span>
+                    <p>JavaScript</p>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
+                        <div class="progress-bar" style="width: 80%"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span>Kotlin</span>
+                    <p>Python</p>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 65%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>JavaScript</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Unity</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Godot</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
+                        <div class="progress-bar" style="width: 70%"></div>
                     </div>
                 </div>
             </div>
@@ -283,27 +301,22 @@
 
         <section id="goals" class="section">
             <h2>My Goals</h2>
-            <p>
-                As I continue to learn and grow in my programming skills, my primary goals include:
-                <ul>
-                    <li>Becoming a CFD Engineer.</li>
-                    <li>Building a successful career in game development.</li>
-                    <li>Contributing to open-source projects.</li>
-                    <li>Creating innovative software solutions.</li>
-                </ul>
-            </p>
+            <p>To work on larger-scale game development projects, master web development frameworks, and contribute to open-source projects.</p>
         </section>
 
         <section id="interests" class="section">
             <h2>My Interests</h2>
-            <p>
-                I have a keen interest in physics and chemistry, as well as automation projects in coding. I enjoy learning new programming languages and exploring the latest technologies.
-            </p>
+            <p>I enjoy game development, physics, and mathematics. I am passionate about learning new technologies and constantly improving my skills.</p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Mustafa Shakeel</p>
+        <p>Connect with me on 
+            <a href="https://github.com/mustafaC0der" target="_blank">GitHub</a>, 
+            <a href="https://www.instagram.com/_mustafa_lol_" target="_blank">Instagram</a>, 
+            <a href="https://www.tiktok.com/@mustafa_ishere" target="_blank">TikTok</a>
+        </p>
     </footer>
 </body>
 </html>
