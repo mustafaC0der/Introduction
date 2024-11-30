@@ -240,6 +240,46 @@
     border-radius: 10px;
     transition: width 0.4s ease-in-out;
 }
+        .blogs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    background-color: #21262d;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33.333% - 20px); /* Three items per row */
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+    font-size: 24px;
+    color: #58a6ff;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 18px;
+    color: #c9d1d9;
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex: 1 1 100%; /* Single column on smaller screens */
+        max-width: 100%;
+    }
+}
+
 
 
     </style>
@@ -419,26 +459,26 @@
                 </ul>
                     </section>
         <section id="Blogs" class="section">
-                        <h2>Blogs</h2>
-                        <div class="projects-grid">
-                            <div class="project">
-                                <h3>SCP blog</h3>
-                                <p>In this blog, I will walk you through the history of scp on the internet.</p>
-                                <a href="https://mustafac0der.github.io/Blog.2/" target="_blank" style="color: #f7f7f7;">Read the Blog</a>
-                            </div>
-                            <div class="project">
-                                <h3>Learning how to code</h3>
-                                <p>Discover the essentials of getting started with software engineering and programming.</p>
-                                <a href="https://mustafac0der.github.io/blog/" target="_blank" style="color: #f7f7f7;">Read the Blog</a>
-                            </div>
-                            
-                        </div>
-                        <div class="project">
-                            <h3>Unity guide</h3>
-                            <p>A guide to the best game engine, unity!.</p>
-                            <a href="https://mustafac0derDisc.github.io/blog/" target="_blank" style="color: #f7f7f7;">Read the Blog</a>
-                        </div>
-                    </div>
+    <h2>Blogs</h2>
+    <div class="blogs-grid">
+        <div class="project">
+            <h3>SCP Blog</h3>
+            <p>In this blog, I will walk you through the history of SCP on the internet.</p>
+            <a href="https://mustafac0der.github.io/Blog.2/" target="_blank" style="color: #f7f7f7;">Read the Blog</a>
+        </div>
+        <div class="project">
+            <h3>Learning How to Code</h3>
+            <p>Discover the essentials of getting started with software engineering and programming.</p>
+            <a href="https://mustafac0der.github.io/blog/" target="_blank" style="color: #f7f7f7;">Read the Blog</a>
+        </div>
+        <div class="project">
+            <h3>Unity Guide</h3>
+            <p>A guide to the best game engine, Unity!</p>
+            <a href="https://mustafac0der.github.io/Unity-guide/" target="_blank" style="color: #f7f7f7;">Read the Blog</a>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <footer>
