@@ -1,169 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MustafaC0der</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/pfp.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Mustafa Shakeel</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            line-height: 1.8;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.8;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
 
-        header {
-            background: linear-gradient(135deg, #6a0dad, #1e90ff);
-            padding: 80px 0;
-            text-align: center;
-            border-radius: 10px;
-            margin-bottom: 40px;
-        }
+/* Full-Screen Header */
+header {
+    background: linear-gradient(135deg, #6a0dad, #1e90ff);
+    padding: 80px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
 
-        header h1 {
-            font-size: 60px;
-            color: #fff;
-            margin-bottom: 20px;
-        }
+header h1 {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 20px;
+}
 
-        header p {
-            font-size: 22px;
-            color: rgba(255, 255, 255, 0.8);
-        }
+header p {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.8);
+}
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
 
-        nav ul li {
-            list-style: none;
-            margin: 0 20px;
-        }
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
 
-        nav ul li a:hover {
-            color: #ffd700;
-        }
+nav ul li a:hover {
+    color: #ffd700;
+}
 
-        section {
-            margin-bottom: 60px;
-            background-color: #161b22;
-            padding: 40px;
-            border-radius: 10px;
-            transition: transform 0.3s, background 0.3s;
-        }
+/* Section Styling */
+.section {
+    margin-bottom: 60px;
+    background-color: #161b22;
+    padding: 40px;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
 
-        section:hover {
-            transform: translateY(-5px);
-            background-color: #21262d;
-        }
+.section:hover {
+    transform: translateY(-5px);
+    background-color: #21262d;
+}
 
-        h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
-            color: #58a6ff;
-        }
+.section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #58a6ff;
+}
 
-        h3 {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            margin-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .roadmap {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .step {
-            flex: 1;
-            min-width: 300px;
-            padding: 30px;
-            background-color: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-
-        .step:hover {
-            transform: scale(1.05);
-            border-color: #58a6ff;
-        }
-
-        .step h3 {
-            font-size: 26px;
-            margin-bottom: 10px;
-        }
-
-        .step p {
-            font-size: 18px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #161b22;
-            margin-top: 40px;
-            border-radius: 10px;
-        }
-
-        footer p {
-            color: #8b949e;
-        }
-
-        footer a {
-            color: #58a6ff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #ffd700;
-        }
-
-        @media (max-width: 768px) {
-            .roadmap {
-                flex-direction: column;
-            }
-        }
-        .projects-grid {
+/* Project Grid */
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
@@ -188,10 +115,7 @@
     margin-bottom: 10px;
 }
 
-.project p {
-    font-size: 18px;
-    color: #c9d1d9;
-}
+/* Gallery Section */
 .gallery-container {
     display: flex;
     justify-content: space-between;
@@ -216,6 +140,8 @@
 .gallery-item img:hover {
     transform: scale(1.05);
 }
+
+/* Skills Progress Bar */
 .skill {
     margin-bottom: 20px;
 }
@@ -242,54 +168,116 @@
     transition: width 0.4s ease-in-out;
 }
 
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #161b22;
+    margin-top: 40px;
+    border-radius: 10px;
+}
 
+footer p {
+    color: #8b949e;
+}
+
+footer a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+    }
+}
+.profile-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+    
+        .circle-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #58a6ff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .circle-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
-
-<header>
-    <h1>Mustafa Shakeel</h1>
-    <div class="social-links">
-        <a href="https://github.com/mustafaC0der" target="_blank" style="font-weight: bold; color: black; text-decoration: none; padding: 0 10px; font-size: 20px;">
-            GitHub <img src="images/github.jpg" alt="GitHub" style="width: 20px; height: 20px; vertical-align: middle; margin-left: 5px;">
-        </a>
-        <a href="https://www.instagram.com/_mustafa_lol_" target="_blank" style="font-weight: bold; color: black; text-decoration: none; padding: 0 10px; font-size: 20px;">
-            Instagram <img src="images/insta.jpg" alt="Instagram" style="width: 20px; height: 20px; vertical-align: middle; margin-left: 5px;">
-        </a>
-        <a href="https://www.tiktok.com/@mustafa_ishere" target="_blank" style="font-weight: bold; color: black; text-decoration: none; padding: 0 10px; font-size: 20px;">
-            TikTok <img src="images/tiktok.jpg" alt="TikTok" style="width: 20px; height: 20px; vertical-align: middle; margin-left: 5px;">
-        </a>
-    </div>
-    <br>
-    <p>14-year-old developer skilled in game dev and web design</p>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#featured-projects">Featured Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#goals">Goals</a></li>
-            <li><a href="#interests">Interests</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#Blogs">blogs</a></li>
-        </ul>
-    </nav>
-</header>
-
-
-
-
-
-    <main class="container">
+<body>
+    <header>
+        <h1>Mustafa Shakeel</h1>
+        <div class="social-links">
+            <a href="https://github.com/mustafaC0der" target="_blank" style="font-weight: bold; color: black; text-decoration: none; padding: 0 10px; font-size: 20px;">
+                GitHub <img src="images/github.jpg" alt="GitHub" style="width: 20px; height: 20px; vertical-align: middle; margin-left: 5px;">
+            </a>
+            <a href="https://www.instagram.com/_mustafa_lol_" target="_blank" style="font-weight: bold; color: black; text-decoration: none; padding: 0 10px; font-size: 20px;">
+                Instagram <img src="images/insta.jpg" alt="Instagram" style="width: 20px; height: 20px; vertical-align: middle; margin-left: 5px;">
+            </a>
+            <a href="https://www.tiktok.com/@mustafa_ishere" target="_blank" style="font-weight: bold; color: black; text-decoration: none; padding: 0 10px; font-size: 20px;">
+                TikTok <img src="images/tiktok.jpg" alt="TikTok" style="width: 20px; height: 20px; vertical-align: middle; margin-left: 5px;">
+            </a>
+        </div>
+        <br>
+        <div class="profile-image">
+ <img src="images/image3.jpeg" alt="Profile Image" class="circle-image">
+            </a>
+        </div>
+        <p>14-year-old developer skilled in game dev and web design</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#featured-projects">Featured Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#Blogs">blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
         <section id="about" class="section">
             <h2>About Me</h2>
             <p>
                 I’m a young developer with expertise in Unity, Godot, and Roblox Studio. I’m proficient in:
             </p>
-            <ul>
-                <li>GD Script, Lua, C++, C#, PHP</li>
-                <li>HTML, CSS, JavaScript, Python, Kotlin</li>
-            </ul>
-            <p>Also experienced in Adobe and Autodesk software. I am passionate about learning new technologies and continuously improving my skills.</p>
+            <div class="skills">
+                <h1>Programming Languages</h1>
+                <img src="https://skillicons.dev/icons?i=godot,lua,cpp,cs,php" alt="Skills Icons">
+                <img src="https://skillicons.dev/icons?i=html,css,js,python,kotlin" alt="Skills Icons">
+                <h1>Tools</h1>
+                <img src="https://skillicons.dev/icons?i=rails" alt="Ruby on Rails">
+<img src="https://skillicons.dev/icons?i=mysql" alt="MySQL">
+<img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite">
+<img src="https://skillicons.dev/icons?i=git" alt="Git">
+<img src="https://skillicons.dev/icons?i=postman" alt="Postman">
+<img src="https://skillicons.dev/icons?i=azure" alt="Azure">
+<img src="https://skillicons.dev/icons?i=jenkins" alt="Jenkins">
+<img src="https://skillicons.dev/icons?i=robloxstudio" alt="Roblox Studio">
+<img src="https://skillicons.dev/icons?i=unity" alt="Unity">
+<img src="https://skillicons.dev/icons?i=godot" alt="Godot">
+<img src="https://skillicons.dev/icons?i=gtk,electron,tauri,androidstudio,vscode,dotnet" alt="My Skills">
+
+
+            </div>
         </section>
         
 
@@ -318,6 +306,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- New Gallery Section -->
         <section id="gallery" class="section">
             <h2>Gallery</h2>
             <div class="gallery-container">
@@ -332,104 +322,102 @@
                 </div>
             </div>
         </section>
-        <section id="featured-projects" class="section">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project">
-                    <h3>PixelPad</h3>
-                    <p>A text editor made in python using Pyqt6.</p>
-                    <a href="https://github.com/mustafaC0der/PixelPadtext" target="_blank" style="color: #f7f7f7;">View on GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>ChatBot</h3>
-                    <p>Python chatbot with predefined inputs.</p>
-                    <a href="https://github.com/mustafaC0der/BasicChatbot" target="_blank" style="color: hsl(0, 0%, 100%);">View on GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>windflow</h3>
-                    <p>template for simulating a windcatcher in ansys fluent.</p>
-                    <a href="https://github.com/mustafaC0der/ANSYS-windflow" target="_blank" style="color: #ffffff;">View on GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>Ryza-code</h3>
-                    <p>C++ code editor.</p>
-                    <a href="https://github.com/mustafaC0der/Ryza-editor" target="_blank" style="color: #ffffff;">View on GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>TheMathsTeacher</h3>
-                    <p>TheMathsTeacher is a versatile bot used to solve mathematic problems</p>
-                    <a href="https://github.com/mustafaC0der/TheMathsTeacher" target="_blank" style="color: #ffffff;">View on GitHub</a>
-                </div>
-                 <div class="project">
-                    <h3>Weather app</h3>
-                    <p>Classic javascript weather app template. (i worked all night on this)</p>
-                    <a href="https://github.com/mustafaC0der/TheMathsTeacher" target="_blank" style="color: #ffffff;">View on GitHub</a>
-                </div>
-            </section>
-            <section id="skills" class="section">
-                <h2>My Skills</h2>
-                <div class="skills">
-                    <div class="skill">
-                        <span>Python</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>C++</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Kotlin</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 65%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>JavaScript</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Unity</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Godot</span>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 70%;"></div>
-                        </div>
+
+       <section id="featured-projects" class="section">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+        <div class="project">
+            <h3>PixelPad</h3>
+            <p>A text editor made in python using Pyqt6.</p>
+            <a href="https://github.com/mustafaC0der/PixelPadtext" target="_blank" style="color: #ffd700;">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>ChatBot</h3>
+            <p>Python chatbot with predefined inputs.</p>
+            <a href="https://github.com/mustafaC0der/BasicChatbot" target="_blank" style="color: #ffd700;">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>windflow</h3>
+            <p>template for simulating a windcatcher in ansys fluent.</p>
+            <a href="https://github.com/mustafaC0der/ANSYS-windflow" target="_blank" style="color: #ffd700;">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Ryza-code</h3>
+            <p>C++ code editor.</p>
+            <a href="https://github.com/mustafaC0der/Ryza-editor" target="_blank" style="color: #ffd700;">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>TheMathsTeacher</h3>
+            <p>TheMathsTeacher is a versatile bot used to solve mathematic problems</p>
+            <a href="https://github.com/mustafaC0der/TheMathsTeacher" target="_blank" style="color: #ffd700;">View on GitHub</a>
+        </div>
+    </div>
+</section>
+        <section id="skills" class="section">
+            <h2>My Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%;"></div>
                     </div>
                 </div>
-            </section>
-            <section id="goals" class="section">
-                <h2>My Goals</h2>
-                <p>
-                    As I continue to learn and grow in my programming skills, my primary goals include:
-                    <ul>
-                        <li>Becoming a CFD Engineer.</li>
-                        <li>Building a successful career in game development.</li>
-                        <li>Contributing to open-source projects.</li>
-                        <li>Creating innovative software solutions.</li>
-                    </ul>
-                </p>
-            </section>
-            <section id="interests" class="section">
-                <h2>My Interests</h2>
-                <ul>
-                    <li><strong>Game Development:</strong> Passion for creating games using Unity, Godot, and Roblox Studio. Continuously exploring new techniques and tools to enhance game design and development.</li>
-                    <li><strong>Web Design & Development:</strong> Interest in building visually appealing and user-friendly websites with HTML, CSS, JavaScript, and backend technologies. Learning the latest trends in web design.</li>
-                    <li><strong>Programming Languages:</strong> Exploring different programming languages like Python, C++, Kotlin, and JavaScript. Constantly working on improving coding skills for various applications.</li>
-                    <li><strong>Physics & Chemistry:</strong> A deep interest in the fundamentals of physics and chemistry, with the goal of applying scientific principles to engineering problems, especially in CFD and simulations.</li>
-                </ul>
-                    </section>
-                </section>
-                <section id="Blogs" class="section">
+                <div class="skill">
+                    <span>C++</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Kotlin</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Unity</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Godot</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     <section id="goals" class="section">
+    <h2>My Goals</h2>
+    <p>
+        As I continue to learn and grow in my programming skills, my primary goals include:
+        <ul>
+            <li>Becoming a CFD Engineer.</li>
+            <li>Building a successful career in game development.</li>
+            <li>Contributing to open-source projects.</li>
+            <li>Creating innovative software solutions.</li>
+        </ul>
+    </p>
+</section>
+
+<section id="interests" class="section">
+    <h2>My Interests</h2>
+    <ul>
+        <li><strong>Game Development:</strong> Passion for creating games using Unity, Godot, and Roblox Studio. Continuously exploring new techniques and tools to enhance game design and development.</li>
+        <li><strong>Web Design & Development:</strong> Interest in building visually appealing and user-friendly websites with HTML, CSS, JavaScript, and backend technologies. Learning the latest trends in web design.</li>
+        <li><strong>Programming Languages:</strong> Exploring different programming languages like Python, C++, Kotlin, and JavaScript. Constantly working on improving coding skills for various applications.</li>
+        <li><strong>Physics & Chemistry:</strong> A deep interest in the fundamentals of physics and chemistry, with the goal of applying scientific principles to engineering problems, especially in CFD and simulations.</li>
+    </ul>
+</section>
+        <section id="Blogs" class="section">
             <h2>Blogs</h2>
             <div class="blogs-grid">
                 <div class="project">
@@ -456,8 +444,7 @@
             <a href="https://github.com/mustafaC0der" target="_blank">GitHub</a>, 
             <a href="https://www.instagram.com/_mustafa_lol_" target="_blank">Instagram</a>, 
             <a href="https://www.tiktok.com/@mustafa_ishere" target="_blank">TikTok</a>
-        | <a href="#introduction">Back to Top</a></p>
+        </p>
     </footer>
 </body>
-
 </html>
