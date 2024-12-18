@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Updated Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Mustafa Shakeel</title>
     <style>
-      /* Global Reset */
+        body {
+            font-family: 'Roboto', sans-serif; /* Primary font for body text */
+            background-color: #1a1a1a; /* Modern dark theme */
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif; /* Modern font for headings */
+            font-weight: 600; /* Slightly bold for a clean look */
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif; /* Maintain body font */
+            line-height: 1.6; /* Enhance readability */
+        }
+
+        a {
+            font-family: 'Roboto', sans-serif; /* Links remain consistent with body font */
+            color: #9b59b6;
+            text-decoration: none;
+        }
+        /* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -15,11 +39,14 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0d1117;
-    color: #c9d1d9;
+    background-color: #1a1a1a; /* Dark grey background */
+    color: #dcdcdc; /* Light grey text */
     line-height: 1.8;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -29,140 +56,195 @@ body {
 
 /* Full-Screen Header */
 header {
-    background: linear-gradient(135deg, #6a0dad, #1e90ff);
-    padding: 80px 0;
+    background: linear-gradient(135deg, #6a0dad, #2d2d2d); /* Purple to dark grey */
+    padding: 80px 20px;
     text-align: center;
-    border-radius: 10px;
-    margin-bottom: 40px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 header h1 {
-    font-size: 60px;
-    color: #fff;
-    margin-bottom: 20px;
+    font-size: 4.5rem;
+    color: #ffffff; /* White text */
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-weight: 700;
 }
 
 header p {
-    font-size: 22px;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    margin-top: 10px;
 }
 
+.social-links a {
+    color: #dcdcdc;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 12px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #9b59b6; /* Lighter purple on hover */
+    transform: scale(1.1);
+}
+
+/* Profile Image */
+.profile-image {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.circle-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #9b59b6; /* Lighter purple border */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.circle-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(155, 89, 182, 0.8); /* Glowing purple shadow */
+}
+
+/* Navigation */
 nav ul {
     display: flex;
     justify-content: center;
+    gap: 20px;
     margin-top: 30px;
 }
 
 nav ul li {
     list-style: none;
-    margin: 0 20px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #dcdcdc;
     text-decoration: none;
-    font-size: 20px;
-    transition: color 0.3s;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #6a0dad; /* Purple border */
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #ffd700;
+    background: #6a0dad; /* Purple background */
+    color: #ffffff;
+    border-color: #9b59b6; /* Lighter purple */
 }
 
 /* Section Styling */
 .section {
-    margin-bottom: 60px;
-    background-color: #161b22;
+    background-color: #242424; /* Slightly lighter dark grey */
     padding: 40px;
-    border-radius: 10px;
-    transition: transform 0.3s, background 0.3s;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .section:hover {
-    transform: translateY(-5px);
-    background-color: #21262d;
+    transform: translateY(-8px);
+    background-color: #2e2e2e; /* Lighter grey */
 }
 
 .section h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
+    color: #9b59b6; /* Purple */
     margin-bottom: 20px;
-    color: #58a6ff;
+    font-weight: 600;
 }
 
 /* Project Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .project {
-    background-color: #21262d;
-    border-radius: 10px;
+    background-color: #1e1e1e; /* Dark grey */
+    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
 }
 
 .project h3 {
-    font-size: 24px;
-    color: #58a6ff;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #ffffff; /* White text */
+    margin-bottom: 12px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #b3b3b3; /* Medium grey */
 }
 
 /* Gallery Section */
 .gallery-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .gallery-item {
     flex: 1 1 calc(33.333% - 20px);
-    max-width: 33.333%;
-    box-sizing: border-box;
+    max-width: calc(33.333% - 20px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* Skills Progress Bar */
 .skill {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .skill span {
-    font-size: 22px;
-    color: #58a6ff;
+    font-size: 1.3rem;
+    color: #ffffff; /* White */
     font-weight: 600;
     display: block;
     margin-bottom: 10px;
 }
 
 .progress {
-    background-color: #30363d;
+    background-color: #3a3a3a; /* Darker grey */
     border-radius: 10px;
-    height: 12px;
+    height: 14px;
     overflow: hidden;
 }
 
 .progress-bar {
-    background-color: #58a6ff;
+    background-color: #9b59b6; /* Purple */
     height: 100%;
     border-radius: 10px;
     transition: width 0.4s ease-in-out;
@@ -171,25 +253,29 @@ nav ul li a:hover {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px 0;
-    background-color: #161b22;
-    margin-top: 40px;
-    border-radius: 10px;
+    padding: 30px 0;
+    background-color: #1e1e1e; /* Dark grey */
+    margin-top: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 footer p {
-    color: #8b949e;
+    color: #b3b3b3; /* Medium grey */
+    font-size: 1rem;
 }
 
 footer a {
-    color: #58a6ff;
+    color: #9b59b6; /* Purple links */
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #ffd700;
+    color: #dcdcdc; /* Light grey */
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
@@ -198,25 +284,21 @@ footer a:hover {
     .gallery-container {
         flex-direction: column;
     }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
 }
-.profile-image {
-            text-align: center;
-            margin: 20px 0;
-        }
-    
-        .circle-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #58a6ff;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-    
-        .circle-image:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+
     </style>
 </head>
 <body>
@@ -255,32 +337,107 @@ footer a:hover {
     
     <main>
         <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>
-                I’m a young developer with expertise in Unity, Godot, and Roblox Studio. I’m proficient in:
+            <h2 style="text-align: center;">About Me</h2>
+            <p style="text-align: center;">
+                I’m a young developer with expertise in Unity, Godot, and Roblox Studio. I’m proficient in a variety of programming languages, tools, and game engines.
             </p>
-            <div class="skills">
-                <h1>Programming Languages</h1>
-                <img src="https://skillicons.dev/icons?i=godot,lua,cpp,cs,php" alt="Skills Icons">
-                <img src="https://skillicons.dev/icons?i=html,css,js,python,kotlin" alt="Skills Icons">
-                <h1>Tools</h1>
-                <img src="https://skillicons.dev/icons?i=rails" alt="Ruby on Rails">
-<img src="https://skillicons.dev/icons?i=mysql" alt="MySQL">
-<img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite">
-<img src="https://skillicons.dev/icons?i=git" alt="Git">
-<img src="https://skillicons.dev/icons?i=postman" alt="Postman">
-<img src="https://skillicons.dev/icons?i=azure" alt="Azure">
-<img src="https://skillicons.dev/icons?i=jenkins" alt="Jenkins">
-<img src="https://skillicons.dev/icons?i=robloxstudio" alt="Roblox Studio">
-<img src="https://skillicons.dev/icons?i=unity" alt="Unity">
-<img src="https://skillicons.dev/icons?i=godot" alt="Godot">
-<img src="https://skillicons.dev/icons?i=gtk,electron,tauri,androidstudio,vscode,dotnet" alt="My Skills">
-
-
+        
+            <!-- Container for Skills -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px;">
+        
+                <!-- Programming Languages -->
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=godot" alt="Godot" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Godot</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=lua" alt="Lua" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Lua</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=cpp" alt="C++" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">C++</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=cs" alt="C#" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">C#</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=php" alt="PHP" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">PHP</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=html" alt="HTML" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">HTML</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=css" alt="CSS" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">CSS</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">JavaScript</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=python" alt="Python" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Python</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=kotlin" alt="Kotlin" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Kotlin</p>
+                </div>
+        
+                <!-- Tools -->
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=rails" alt="Ruby on Rails" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Rails</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">MySQL</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">SQLite</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=git" alt="Git" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Git</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=postman" alt="Postman" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Postman</p>
+                </div>
+        
+                <!-- Game Engines -->
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=robloxstudio" alt="Roblox Studio" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Roblox Studio</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=unity" alt="Unity" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Unity</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=godot" alt="Godot" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Godot</p>
+                </div>
+        
+                <!-- Frameworks & IDEs -->
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=visualstudio" alt="Visual Studio" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">Visual Studio</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=pycharm" alt="PyCharm" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">PyCharm</p>
+                </div>
+                <div style="background-color: #2a2a2a; padding: 10px; border-radius: 8px; text-align: center; width: 100px;">
+                    <img src="https://skillicons.dev/icons?i=vs" alt="Visual Studio Code" style="margin: 5px 0;">
+                    <p style="color: #ffffff; font-size: 14px; margin: 0;">VS Code</p>
+                </div>
             </div>
         </section>
-        
-
         <section id="projects" class="section">
             <h2>My Projects</h2>
             <div class="projects-grid">
